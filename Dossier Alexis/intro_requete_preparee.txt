@@ -1,0 +1,10 @@
+Introduction Requête préparée
+
+Tout d’abord une requête préparée correspond à une façon de créer et d'exécuter nos requêtes selon trois étapes : une étape de préparation, une étape de compilation et finalement une dernière étape d'exécution.
+Le principe d’une requête préparée est simple, les requêtes préparées sont une fonctionnalité que proposent certaines bases de données et qui permet d'exécuter de façon très performante la même requête ou des requêtes très similaires via cette base de donnée.
+Voici une mise en œuvre de requête préparer :
+
+SELECT * FROM entreprise WHERE codepostal = ?
+INSERT INTO commande (ref, nombre, prix) VALUES (?, ?, ?);
+
+Depuis le fichier de bases de données, on utilise alors les instructions PREPARE, EXECUTE et DEALLOCATE pour préparer, exécuter et supprimer la requête préparée.
